@@ -1,6 +1,12 @@
 import { Hono } from "hono";
 
-const app = new Hono().get("/", (c) => {
+import envMiddleware, { type EnvSchema } from "./middlewares/env.middleware";
+
+interface HonoApp {
+  Bindings: EnvSchema;
+}
+
+const app = new Hono<HonoApp>().use(envMiddleware).get("/", (c) => {
   return c.text("Hello Hono!");
 });
 

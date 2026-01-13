@@ -8,5 +8,9 @@
   "devDependencies": {
     "@mono/tsconfig": "workspace:*",
     "hono": "^4.11.4"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
+    "zod": "^4.3.5"
   }
 }
