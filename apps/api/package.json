@@ -1,13 +1,12 @@
 {
   "name": "api",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
-  },
-  "dependencies": {
-    "hono": "^4.11.3"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "devDependencies": {
     "@mono/tsconfig": "workspace:*",
-    "@types/bun": "latest"
+    "hono": "^4.11.4"
   }
 }
